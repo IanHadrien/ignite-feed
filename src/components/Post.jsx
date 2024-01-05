@@ -89,13 +89,17 @@ export function Post({ author, content, publishedAt }) {
           placeholder="Deixe um comentário"
           value={newComment}
           onChange={handleNewCommentChange}
+          required
         />
 
-        {/* <footer className="invisible max-h-0"> */}
-          <button className="py-4 px-6 mt-4 rounded-lg border-0 bg-green-light text-white font-bold cursor-pointer transition hover:bg-green-green" type="submit">
+        <footer>
+          <button 
+            disabled={newComment.length === 0}
+            className="py-4 px-6 mt-4 rounded-lg border-0 bg-green-light text-white font-bold cursor-pointer transition hover:bg-green-green disabled:opacity-80" type="submit"
+          >
             Publicar
           </button>
-        {/* </footer> */}
+        </footer>
 
         <div className="mt-4">
           {comments.map(comment => {

@@ -35,10 +35,10 @@ const posts = [
 
 export function App() {
   return (
-    <div className="bg-black-gray1 h-screen text-white">
+    <div className="bg-black-gray1 h-full text-white">
       <Header />
 
-      <div className="max-w-6xl mx-auto my-8 grid grid-cols-1 gap-8 items-start md:grid-cols-2">
+      <div className="max-w-6xl mx-auto mt-8 grid grid-cols-1 gap-8 items-start md:grid-cols-2">
         <Sidebar />
         <main>
           {posts.map((post) => (
